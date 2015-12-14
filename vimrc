@@ -48,6 +48,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdcommenter'
 
 " Turn on plugins etc
 filetype plugin indent on
