@@ -28,3 +28,5 @@
   safecrlf = warn
   excludesfile = ~/.gitignore_global
   quotepath = false
+[push]
+	default = simple
