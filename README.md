@@ -1,8 +1,8 @@
-# WORK IN PROGRESS
+# README - "WORK IN PROGRESS"
 
 My vim, zsh, git and other configuration files.
 
-# Installation
+## Installation
 
 My dotfiles are managed using https://github.com/thoughtbot/rcm. Install rcm using:
 
@@ -29,10 +29,8 @@ Install vim plugins.
 vim +PluginInstall +qall
 ```
 
-# References
+## References
 
-[rcm, an rc file manager](https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos)
-
-[Your unofficial guide to dotfiles on GitHub.](https://dotfiles.github.io)
-
-[git_prompt](https://gist.github.com/joshdick/4415470)
+* [rcm, an rc file manager](https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos)
+* [Your unofficial guide to dotfiles on GitHub.](https://dotfiles.github.io)
+* [git_prompt](https://gist.github.com/joshdick/4415470)
