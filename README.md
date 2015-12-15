@@ -28,3 +28,8 @@ Install vim plugins.
 ```bash
 vim +PluginInstall +qall
 ```
+
+# References
+
+[rcm, an rc file manager](https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos)
+[Your unofficial guide to dotfiles on GitHub.](https://dotfiles.github.io)
