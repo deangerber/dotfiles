@@ -1,4 +1,4 @@
-# README - "WORK IN PROGRESS"
+# Readme - "WORK IN PROGRESS"
 
 My vim, zsh, git and other configuration files.
 
