@@ -32,7 +32,12 @@ brew bundle --file=~/.dotfiles/Brewfile
 Use rcm to setup dotfiles
 
 ```bash
-cd ~/.dotfiles
+env RCRC=$HOME/.dotfiles/rcrc rcup
+```
+
+The above command only needs to be run the first time. After that just run
+
+```bash
 rcup
 ```
 
