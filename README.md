@@ -41,7 +41,7 @@ The above command only needs to be run the first time. After that just run
 rcup
 ```
 
-Vim uses https://github.com/VundleVim/Vundle.vim to manage plugins. Install the Vundle plugin.
+Vim uses [Vundle](https://github.com/VundleVim/Vundle.vim) to manage plugins. Install the Vundle plugin.
 
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
