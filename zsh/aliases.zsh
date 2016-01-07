@@ -22,3 +22,6 @@ alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gpu='git pull'
 alias gcl='git clone'
+
+# Vim Vundle
+alias vu='vim +PluginUpdate +qall'
