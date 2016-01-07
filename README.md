@@ -6,15 +6,15 @@ My vim, zsh, git and other configuration files.
 
 My dotfiles are managed using https://github.com/thoughtbot/rcm.
 
+Install homebrew
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
 Clone the dotfiles managed by rcm.
 
 ```bash
 git clone git://github.com/zanshin/dotfiles.git ~/.dotfiles
-```
-
-Install homebrew
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Install homebrew bundle
