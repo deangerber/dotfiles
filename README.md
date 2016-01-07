@@ -56,5 +56,6 @@ vim +PluginInstall +qall
 ## References
 
 * [rcm, an rc file manager](https://robots.thoughtbot.com/rcm-for-rc-files-in-dotfiles-repos)
+* [brew bundle](https://github.com/Homebrew/homebrew-bundle)
 * [Your unofficial guide to dotfiles on GitHub.](https://dotfiles.github.io)
 * [git_prompt](https://gist.github.com/joshdick/4415470)
