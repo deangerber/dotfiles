@@ -22,6 +22,7 @@ brew 'tree'
 brew 'vim'
 brew 'youtube-dl'
 brew 'zsh'
+brew 'zsh-completions'
 brew 'thoughtbot/formulae/rcm'
 
 # My prefered code font
