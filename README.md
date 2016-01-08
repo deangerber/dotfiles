@@ -14,7 +14,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 Clone the dotfiles managed by rcm.
 
 ```bash
-git clone git://github.com/zanshin/dotfiles.git ~/.dotfiles
+git clone git://github.com/deangerber/dotfiles.git ~/.dotfiles
 ```
 
 Install homebrew bundle
