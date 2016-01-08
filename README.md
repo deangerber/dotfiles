@@ -4,7 +4,7 @@ My vim, zsh, git and other configuration files.
 
 ## Installation
 
-My dotfiles are managed using https://github.com/thoughtbot/rcm.
+My dotfiles are managed using [rcm](https://github.com/thoughtbot/rcm).
 
 Install homebrew
 ```bash
