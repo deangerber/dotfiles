@@ -24,6 +24,7 @@ brew 'youtube-dl'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'thoughtbot/formulae/rcm'
+brew 'curl'
 
 # My prefered code font
 cask 'font-source-code-pro'
