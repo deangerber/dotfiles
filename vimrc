@@ -12,8 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 call vundle#end()		" required by vundle
 
 " File types
-" Ruby
+" Ruby on Rails
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
 " JavaScript
