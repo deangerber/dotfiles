@@ -12,3 +12,7 @@ export EDITOR='vim'
 # Enable color in grep
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
+
+# Node version management - https://github.com/tj/n
+export PREFIX=$HOME
+export N_PREFIX=$HOME
