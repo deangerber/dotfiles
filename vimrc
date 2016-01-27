@@ -23,6 +23,8 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Shutnik/jshint2.vim'
+" Coffeescript
+Plugin 'kchmck/vim-coffee-script'
 " HTML, CSS etc
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
