@@ -13,6 +13,14 @@ export EDITOR='vim'
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 
-# Node version management - https://github.com/tj/n
-export PREFIX=$HOME
-export N_PREFIX=$HOME
+# for Homebrew installed rbenv
+if [ -d $HOME/.rbenv ]; then
+  # Put the rbenv entry at the front of the line
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  # enable shims and auto-completion
+  eval "$(rbenv init -)"
+fi
+
+# for Homebrew installed nvm
+export NVM_DIR=~/.nvm
+  . $(brew --prefix nvm)/nvm.sh
