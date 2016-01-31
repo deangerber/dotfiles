@@ -55,6 +55,7 @@ Plugin 'deangerber/snipmate-chai'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/nerdcommenter'
 
 " Turn on plugins etc
