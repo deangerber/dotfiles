@@ -15,6 +15,7 @@ call vundle#end()		" required by vundle
 " Ruby on Rails
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'asux/vim-capybara'
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
@@ -134,3 +135,8 @@ let g:airline#extensions#tabline#enabled=1	" tab line
 "let g:airline#extensions#tabline#left_sep=' '
 "let g:airline#extensions#tabline#left_alt_sep='|'
 
+" RSpec.vim mappings
+map <Leader>c :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
