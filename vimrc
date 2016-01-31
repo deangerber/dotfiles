@@ -47,6 +47,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'wesQ3/vim-windowswap'
 
 " Code
 Plugin 'tomtom/tlib_vim'
