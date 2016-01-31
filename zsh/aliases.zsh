@@ -29,4 +29,4 @@ alias vu='vim +PluginUpdate +qall'
 # Homebrew
 alias hbu='brew update'
 alias hbg='brew upgrade'
-alias hbc='brew clean'
+alias hbc='brew cleanup'
