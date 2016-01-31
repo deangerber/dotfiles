@@ -35,6 +35,7 @@ Plugin 'othree/html5.vim'
 
 " Utilities
 Plugin 'tpope/vim-sensible'
+Plugin 'danro/rename.vim'
 
 " UI
 Plugin 'ciaranm/detectindent'
