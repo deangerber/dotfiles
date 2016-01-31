@@ -15,6 +15,7 @@ call vundle#end()		" required by vundle
 " Ruby on Rails
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'asux/vim-capybara'
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
 " JavaScript
