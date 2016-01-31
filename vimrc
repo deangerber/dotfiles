@@ -54,6 +54,7 @@ Plugin 'deangerber/snipmate-mocha'
 Plugin 'deangerber/snipmate-chai'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 
 " Turn on plugins etc
