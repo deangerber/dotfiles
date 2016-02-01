@@ -36,6 +36,7 @@ Plugin 'othree/html5.vim'
 " Utilities
 Plugin 'tpope/vim-sensible'
 Plugin 'danro/rename.vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 " UI
 Plugin 'ciaranm/detectindent'
@@ -156,3 +157,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" EditorConfig settings
+let g:EditorConfig_exec_path = '/usr/local/bin/EditorConfig'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
