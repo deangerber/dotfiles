@@ -140,6 +140,8 @@ let g:airline#extensions#tabline#enabled=1	" tab line
 "let g:airline#extensions#tabline#left_alt_sep='|'
 
 " RSpec.vim mappings
+let g:rspec_runner = "os_x_iterm"
+
 map <Leader>c :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
