@@ -9,6 +9,9 @@ export TERM=screen-256color
 
 export EDITOR='vim'
 
+# Turn of hombrew google analytics
+export HOMEBREW_NO_ANALYTICS=1
+
 # Enable color in grep
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
