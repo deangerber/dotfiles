@@ -17,6 +17,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'asux/vim-capybara'
+Plugin 'tpope/vim-cucumber'
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
 " JavaScript
@@ -159,6 +160,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_cucumber_cucumber_args="--profile syntastic"
 
 " EditorConfig settings
 let g:EditorConfig_exec_path = '/usr/local/bin/EditorConfig'
