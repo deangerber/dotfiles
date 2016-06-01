@@ -33,3 +33,6 @@ alias hbc='brew cleanup'
 
 # Utilities
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
+
+# Ruby
+alias be='bundle exec'
