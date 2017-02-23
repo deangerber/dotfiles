@@ -61,6 +61,7 @@ brew 'zsh'
 brew 'zsh-completions'
 brew 'd12frosted/emacs-plus/emacs-plus', args: ['with-cocoa', 'with-gnutls', 'with-imagemagick', 'with-librsvg', 'with-spacemacs-icon']
 brew 'thoughtbot/formulae/rcm'
+brew 'jenv'
 
 # My prefered code font
 cask 'font-source-code-pro'
