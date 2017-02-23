@@ -27,3 +27,9 @@ fi
 # for Homebrew installed nvm
 export NVM_DIR=~/.nvm
   . $(brew --prefix nvm)/nvm.sh
+
+# for Homebrew installed jenv
+if [ -d $HOME/.jenv ]; then
+  export PATH="$HOME/.jenv/bin:$PATH"
+  eval "$(jenv init -)"
+fi
