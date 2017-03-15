@@ -23,6 +23,7 @@ alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gpu='git pull'
 alias gcl='git clone'
+alias gcap='git log --since="00:00:00" --no-merges --oneline --author=dean.gerber@gmail.com'
 
 # Vim Vundle
 alias vu='vim +PluginUpdate +qall'
