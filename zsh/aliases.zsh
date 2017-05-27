@@ -38,3 +38,6 @@ alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/
 
 # Ruby
 alias be='bundle exec'
+
+# npm
+alias nls='npm list -g --depth=0'
