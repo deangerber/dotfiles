@@ -48,6 +48,7 @@ values."
      swift
      scheme
      clojure
+     typescript
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -119,7 +120,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("Fira Code Retina"
                                :size 13
                                :weight normal
                                :width normal
@@ -260,6 +261,7 @@ values."
   (setq web-mode-css-indent-offset n) ; web-mode, css in html file
   (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
   (setq css-indent-offset n) ; css-mode
+  (setq typescript-indent-offset n) ; typescript
   )
 
 (defun dotspacemacs/user-init ()
@@ -276,6 +278,8 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   ;; (setq powerline-default-separator 'wave)
+  ;; FiraCode and other glyphy fonts
+  (mac-auto-operator-composition-mode)
   ;; Make linums relative by default
   (global-linum-mode nil)
   (linum-relative-toggle)
@@ -294,12 +298,13 @@ layers configuration. You are free to put any user code."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (clojure-snippets clj-refactor edn paredit peg cider-eval-sexp-fu cider seq queue clojure-mode geiser yaml-mode json-snatcher json-reformat parent-mode haml-mode gitignore-mode fringe-helper git-gutter+ pos-tip pkg-info epl flx goto-chg diminish web-completion-data dash-functional packed popup bind-key bind-map powerline pcre2el request alert log4e gntp hydra highlight pcache git-gutter swift-mode auto-complete spinner multiple-cursors inflections inf-ruby ob-elixir org minitest hide-comnt async uuidgen pug-mode osx-dictionary org-projectile org-download livid-mode skewer-mode simple-httpd link-hint git-link flycheck-mix eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff dumb-jump column-enforce-mode color-identifiers-mode elixir-mode undo-tree js2-mode s rake f avy tern smartparens git-commit with-editor yasnippet markdown-mode dash package-build evil anzu iedit flycheck company helm helm-core magit magit-popup projectile org-plus-contrib ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vi-tilde-fringe use-package toc-org tagedit spacemacs-theme spaceline smooth-scrolling smeargle slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rainbow-mode rainbow-identifiers rainbow-delimiters quelpa projectile-rails popwin persp-mode pbcopy paradox page-break-lines osx-trash orgit org-repo-todo org-present org-pomodoro org-bullets open-junk-file neotree move-text monokai-theme mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme less-css-mode launchctl json-mode js2-refactor js-doc jade-mode info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe git-gutter-fringe+ gh-md flycheck-pos-tip flx-ido fill-column-indicator feature-mode fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu erlang enh-ruby-mode emmet-mode elisp-slime-nav diff-hl define-word company-web company-tern company-statistics company-quickhelp coffee-mode clean-aindent-mode chruby bundler buffer-move bracketed-paste auto-yasnippet auto-highlight-symbol auto-compile alchemist aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
+    (tide typescript-mode org-category-capture clojure-snippets clj-refactor edn paredit peg cider-eval-sexp-fu cider seq queue clojure-mode geiser yaml-mode json-snatcher json-reformat parent-mode haml-mode gitignore-mode fringe-helper git-gutter+ pos-tip pkg-info epl flx goto-chg diminish web-completion-data dash-functional packed popup bind-key bind-map powerline pcre2el request alert log4e gntp hydra highlight pcache git-gutter swift-mode auto-complete spinner multiple-cursors inflections inf-ruby ob-elixir org minitest hide-comnt async uuidgen pug-mode osx-dictionary org-projectile org-download livid-mode skewer-mode simple-httpd link-hint git-link flycheck-mix eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff dumb-jump column-enforce-mode color-identifiers-mode elixir-mode undo-tree js2-mode s rake f avy tern smartparens git-commit with-editor yasnippet markdown-mode dash package-build evil anzu iedit flycheck company helm helm-core magit magit-popup projectile org-plus-contrib ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vi-tilde-fringe use-package toc-org tagedit spacemacs-theme spaceline smooth-scrolling smeargle slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rainbow-mode rainbow-identifiers rainbow-delimiters quelpa projectile-rails popwin persp-mode pbcopy paradox page-break-lines osx-trash orgit org-repo-todo org-present org-pomodoro org-bullets open-junk-file neotree move-text monokai-theme mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum linum-relative leuven-theme less-css-mode launchctl json-mode js2-refactor js-doc jade-mode info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe git-gutter-fringe+ gh-md flycheck-pos-tip flx-ido fill-column-indicator feature-mode fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu erlang enh-ruby-mode emmet-mode elisp-slime-nav diff-hl define-word company-web company-tern company-statistics company-quickhelp coffee-mode clean-aindent-mode chruby bundler buffer-move bracketed-paste auto-yasnippet auto-highlight-symbol auto-compile alchemist aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
  '(paradox-github-token t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((((class color) (min-colors 257)) (:foreground "#F8F8F2" :background "#272822")) (((class color) (min-colors 89)) (:foreground "#F5F5F5" :background "#1B1E1C"))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
