@@ -287,6 +287,8 @@ layers configuration. You are free to put any user code."
   (add-hook 'alchemist-mode-hook 'company-mode)
   ;; clojure pretty symbols
   (setq clojure-enable-fancify-symbols t)
+  ;; tab for autocomplete
+  (global-set-key (kbd "TAB") 'hippie-expand)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
