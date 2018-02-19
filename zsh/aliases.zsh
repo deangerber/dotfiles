@@ -25,6 +25,14 @@ alias gpu='git pull'
 alias gcl='git clone'
 alias gcap='git log --since="00:00:00" --no-merges --oneline --author=dean.gerber@gmail.com'
 
+gcmc()  { git commit -m "chore: $*";  }    # chore
+gcmd()  { git commit -m "docs: $*";  }     # add
+gcmf()  { git commit -m "feature: $*";  }  # fix
+gcmfi() { git commit -m "fix: $*";  }      # hotfix
+gcmrf() { git commit -m "refactor: $*";  } # refactor
+gcms()  { git commit -m "style: $*";  }    # remove
+gcmt()  { git commit -m "test: $*";  }     # release
+
 # Vim Vundle
 alias vu='vim +PluginUpdate +qall'
 
