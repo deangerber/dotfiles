@@ -49,6 +49,8 @@ values."
      scheme
      clojure
      typescript
+     erlang
+     elixir
      docker
      )
    ;; List of additional packages that will be installed without being
