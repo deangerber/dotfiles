@@ -12,22 +12,17 @@ Plugin 'VundleVim/Vundle.vim'
 call vundle#end()		" required by vundle
 
 " File types
-" Ruby on Rails
+" Ruby
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'asux/vim-capybara'
 Plugin 'tpope/vim-cucumber'
-" Elixir
-Plugin 'elixir-lang/vim-elixir'
 " JavaScript
 Plugin 'elzr/vim-json'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Shutnik/jshint2.vim'
-" Coffeescript
-Plugin 'kchmck/vim-coffee-script'
 " HTML, CSS etc
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
@@ -36,8 +31,8 @@ Plugin 'othree/html5.vim'
 
 " Utilities
 Plugin 'tpope/vim-sensible'
-Plugin 'danro/rename.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-eunuch'
 
 " UI
 Plugin 'ciaranm/detectindent'
@@ -50,21 +45,24 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wesQ3/vim-windowswap'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'majutsushi/tagbar'
 
 " Code
 Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'garbas/vim-snipmate'
+Plugin 'ervandew/supertab'
 Plugin 'honza/vim-snippets'
 Plugin 'deangerber/snipmate-mocha'
 Plugin 'deangerber/snipmate-chai'
-Plugin 'vim-scripts/taglist.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
+Plugin 'airblade/vim-gitgutter'
 
 " Turn on plugins etc
 filetype plugin indent on
@@ -90,6 +88,7 @@ set tabstop=2			    " number of visual spaces per TAB
 set shiftwidth=2            " number of spaces for autoindenting
 set softtabstop=2		    " number of spaces in tab when editing
 set expandtab			    " tabs are spaces
+set updatetime=100    " default value is 4000, i.e. 4 seconds
 
 " UI customization end
 
@@ -98,6 +97,8 @@ let mapleader=','
 let maplocalleader='\\'
 
 nnoremap <cr> :nohlsearch<cr>	" clear the search buffer when hitting return
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+nnoremap <silent> <Leader>ct :!ctags -R -f .tags --languages=ruby,-javascript --exclude=.git,log,tmp,doc,coverage,pkg,vendor . $(bundle list --paths)<cr>  " refresh ctags using alias from zsh
 
 " Turn off arrow keys
 map <Left> :echo "Use h"<cr>
@@ -127,6 +128,7 @@ set scrolloff=3			    " Start scrolling 3 lines before the border
 set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 " Nerdtree 
 map <C-\> :NERDTreeToggle<CR>	" Ctrl+\
@@ -165,3 +167,9 @@ let g:syntastic_cucumber_cucumber_args="--profile syntastic"
 " EditorConfig settings
 let g:EditorConfig_exec_path = '/usr/local/bin/EditorConfig'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" ALE settings
+let g:ale_sign_column_always = 1 " sign gutter open at all times
+
+" ctags settings
+set tags+=.tags
