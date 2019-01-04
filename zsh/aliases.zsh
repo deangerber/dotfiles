@@ -49,3 +49,6 @@ alias be='bundle exec'
 
 # npm
 alias nls='npm list -g --depth=0'
+
+# ctags
+alias itag='ctags -R -f .tags --languages=ruby,-javascript --exclude=.git,log,tmp,doc,coverage,pkg,vendor . $(bundle list --paths)'
