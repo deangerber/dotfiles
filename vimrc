@@ -35,6 +35,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'adelarsq/vim-matchit'
+Plugin 'skywind3000/asyncrun.vim'
 
 " UI
 Plugin 'ciaranm/detectindent'
@@ -100,7 +101,7 @@ let maplocalleader='\\'
 
 nnoremap <cr> :nohlsearch<cr>	" clear the search buffer when hitting return
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
-nnoremap <silent> <Leader>ct :!ctags -R -f .tags --languages=ruby,-javascript --exclude=.git,log,tmp,doc,coverage,pkg,vendor . $(bundle list --paths)<cr>  " refresh ctags using alias from zsh
+nnoremap <silent> <Leader>ct :AsyncRun ctags -R -f .tags --languages=ruby,-javascript --exclude=.git,log,tmp,doc,coverage,pkg,vendor . $(bundle list --paths)<cr>  " refresh ctags using alias from zsh
 
 " Turn off arrow keys
 map <Left> :echo "Use h"<cr>
