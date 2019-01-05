@@ -14,6 +14,7 @@ call vundle#end()		" required by vundle
 " File types
 " Ruby
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'asux/vim-capybara'
 Plugin 'tpope/vim-cucumber'
@@ -33,6 +34,7 @@ Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-eunuch'
+Plugin 'adelarsq/vim-matchit'
 
 " UI
 Plugin 'ciaranm/detectindent'
