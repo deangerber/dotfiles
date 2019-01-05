@@ -115,7 +115,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Move line(s) up or down via C-j and C-k respectively 
+" Move line(s) up or down via C-j and C-k respectively
 " Insert mode
 inoremap <C-j> <ESC>:m .+1<CR>==gi
 inoremap <C-k> <ESC>:m .-2<CR>==gi
@@ -138,7 +138,7 @@ map <C-\> :NERDTreeToggle<CR>	" Ctrl+\
 
 " CtrlP
 let g:ctrlp_map = '<c-p>'
-
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|vendor'
 " Airline
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1	" tab line
@@ -147,6 +147,7 @@ let g:airline#extensions#tabline#enabled=1	" tab line
 
 " RSpec.vim mappings
 let g:rspec_runner = "os_x_iterm"
+let g:rspec_command = "AsyncRun bundle exec rspec {spec}"
 
 map <Leader>c :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -178,5 +179,6 @@ let g:ale_sign_column_always = 1 " sign gutter open at all times
 set tags+=.tags
 
 " asyncrun settings
+let g:asyncrun_open = 8
 let g:asyncrun_status = ''
 let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
