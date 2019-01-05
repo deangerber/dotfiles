@@ -176,3 +176,7 @@ let g:ale_sign_column_always = 1 " sign gutter open at all times
 
 " ctags settings
 set tags+=.tags
+
+" asyncrun settings
+let g:asyncrun_status = ''
+let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
