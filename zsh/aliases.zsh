@@ -40,6 +40,7 @@ alias vu='vim +PluginUpdate +qall'
 alias hbu='brew update'
 alias hbg='brew upgrade'
 alias hbc='brew cleanup'
+alias hbo='brew outdated'
 
 # Utilities
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
