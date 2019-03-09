@@ -3,4 +3,5 @@
 ;; Place your private configuration here
 
 ;; Modules
+(load! "+ruby")
 (load! "+ui")
