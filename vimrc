@@ -29,6 +29,14 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'lukaszb/vim-web-indent'
 Plugin 'othree/html5.vim'
+" Clojure
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'luochen1990/rainbow'
+Plugin 'guns/vim-sexp'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+Plugin 'gberenfield/cljfold.vim'
+Plugin 'tpope/vim-repeat.git'
 
 " Utilities
 Plugin 'tpope/vim-sensible'
@@ -139,6 +147,7 @@ map <C-\> :NERDTreeToggle<CR>	" Ctrl+\
 " CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git\|vendor'
+
 " Airline
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1	" tab line
@@ -182,3 +191,22 @@ set tags+=.tags
 let g:asyncrun_open = 8
 let g:asyncrun_status = ''
 let g:airline_section_error = airline#section#create_right(['%{g:asyncrun_status}'])
+
+" clojure rainbow parens
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+      \  'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+      \  'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+      \  'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+      \  'separately': {
+      \      '*': 0,
+      \      'clojure': {},
+      \  }
+      \}
+
+" clojure folding
+let g:clojure_foldwords = "def,defn,defmacro,defmethod,defschema,defprotocol,defrecord"
+
+" clojure fireplace
+au BufEnter *.clj nnoremap <buffer> cpt :Eval<CR> " evaluate top level form
+au BufEnter *.clj nnoremap <buffer> cpl :Last<CR> " show last evaluation in temp file
