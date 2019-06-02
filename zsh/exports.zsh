@@ -33,3 +33,8 @@ if [ -d $HOME/.jenv ]; then
   export PATH="$HOME/.jenv/bin:$PATH"
   eval "$(jenv init -)"
 fi
+
+# for golang
+if [ -d $HOME/go ]; then
+  export PATH="$HOME/go/bin:$PATH"
+fi
