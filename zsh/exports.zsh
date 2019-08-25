@@ -39,5 +39,7 @@ fi
 
 # for golang
 if [ -d $HOME/go ]; then
-  export PATH="$HOME/go/bin:$PATH"
+  export GOPATH="$HOME/workspace/go"
+  export GOBIN="$GOPATH/bin"
+  export PATH="$GOBIN:$PATH"
 fi
