@@ -16,6 +16,9 @@ export HOMEBREW_NO_ANALYTICS=1
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 
+# for docker container testing tool goss
+export GOSS_PATH=~/bin/goss-linux-amd64
+
 # for Homebrew installed rbenv
 if [ -d $HOME/.rbenv ]; then
   # Put the rbenv entry at the front of the line
