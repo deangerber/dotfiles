@@ -38,7 +38,7 @@ if [ -d $HOME/.jenv ]; then
 fi
 
 # for golang
-if [ -d $HOME/go ]; then
+if [ -d $HOME/workspace/go ]; then
   export GOPATH="$HOME/workspace/go"
   export GOBIN="$GOPATH/bin"
   export PATH="$GOBIN:$PATH"
