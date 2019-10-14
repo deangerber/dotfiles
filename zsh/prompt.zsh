@@ -77,7 +77,7 @@ git_prompt_string() {
 }
 
 # Prompt
-local smiley="%(?,%{$fg[green]%}🙂%{$reset_color%},%{$fg[red]%}☹%{$reset_color%})"
+local smiley="%(?,%{$fg[green]%}🙂%{$reset_color%},%{$fg[red]%}🙁%{$reset_color%})"
 
 PROMPT='
 $fg[green]$(box_name)%{$reset_color%} %~
