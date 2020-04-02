@@ -21,6 +21,8 @@ export GOSS_PATH=~/bin/goss-linux-amd64
 
 # for Homebrew installed rbenv
 if [ -d $HOME/.rbenv ]; then
+  # To link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded)
+  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
   # Put the rbenv entry at the front of the line
   export PATH="$HOME/.rbenv/bin:$PATH"
   # enable shims and auto-completion
